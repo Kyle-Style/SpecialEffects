@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity">
+
+	<android.support.design.widget.CoordinatorLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+
+		<android.support.v4.widget.NestedScrollView
+			android:id="@+id/nssv_container"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:overScrollMode="never"
+			app:layout_behavior="vip.suerbrain.specialeffects.behavior.DefaultBehavior">
+
+			<android.support.constraint.ConstraintLayout
+				android:id="@+id/csyt_container_top"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<android.support.v7.widget.AppCompatImageView
+					android:id="@+id/iv_container_top_bg"
+					android:layout_width="match_parent"
+					android:layout_height="150dp"
+					android:background="#ffdddd"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<android.support.v7.widget.AppCompatImageView
+					android:id="@+id/iv_container_top_ad"
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:layout_margin="14dp"
+					android:background="#bdbdbd"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/iv_container_top_bg" />
+
+				<TextView
+					android:id="@+id/tv_container_top_ad"
+					android:layout_width="0dp"
+					android:layout_height="50dp"
+					android:layout_margin="14dp"
+					android:background="#bdbd00"
+					android:gravity="center|left"
+					android:text="@string/app_name"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toEndOf="@+id/iv_container_top_ad"
+					app:layout_constraintTop_toBottomOf="@+id/iv_container_top_bg" />
+
+				<android.support.v7.widget.RecyclerView
+					android:id="@+id/rcv_container"
+					android:layout_width="match_parent"
+					android:layout_height="800dp"
+					android:layout_marginTop="14dp"
+					android:background="#ffaaaa"
+					app:layout_constraintTop_toBottomOf="@+id/iv_container_top_ad">
+
+
+				</android.support.v7.widget.RecyclerView>
+
+			</android.support.constraint.ConstraintLayout>
+
+		</android.support.v4.widget.NestedScrollView>
+
+		<android.support.constraint.ConstraintLayout
+			android:id="@+id/csyt_top"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:background="#77dfdfdf">
+
+			<android.support.v7.widget.AppCompatImageView
+				android:id="@+id/iv_top_left"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/iv_top_title"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_marginStart="8dp"
+				android:layout_marginLeft="8dp"
+				android:layout_marginEnd="8dp"
+				android:layout_marginRight="8dp"
+				android:gravity="center"
+				android:minWidth="100dp"
+				android:text="书架"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent" />
+
+			<android.support.v7.widget.AppCompatImageView
+				android:id="@+id/iv_top_right_2"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/iv_top_right"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<android.support.v7.widget.AppCompatImageView
+				android:id="@+id/iv_top_right"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		</android.support.constraint.ConstraintLayout>
+
+	</android.support.design.widget.CoordinatorLayout>
+
+</android.support.constraint.ConstraintLayout>
